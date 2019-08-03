@@ -1,5 +1,0 @@
-code=MyPlugin
-info=Results parsed\: {1\=1.0, z\= 3.000715 }
-output={z\= 3.000715 }
-calc=localhost\:45379
-output.z=\ 3.000715 

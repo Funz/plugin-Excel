@@ -1,0 +1,13 @@
+#Thu Oct 11 14:57:51 CEST 2018
+state=running
+start=14\:57\:48
+code=Excel
+info=Results parsed\: {toto\=1, titi\=4, tata\:\:1//A3\=NaN}
+output={tata\:\:1//A3\=NaN}
+input.titi=4
+input.toto=1
+duration=0
+end=
+calc=btses106.proton.intra.irsn.fr\:55205
+output.tata\:\:1//A3=NaN
+output.tata=5.0

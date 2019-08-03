@@ -1,42 +1,30 @@
-[![Build Status](https://travis-ci.org/Funz/plugin-MyPlugin.png)](https://travis-ci.org/Funz/plugin-MyPlugin)
+[![Build Status](https://travis-ci.org/Funz/plugin-Excel.png)](https://travis-ci.org/Funz/plugin-Excel)
 
-___This repositry is intended to be forked as a basis for an new plugin implementation.___
-___You can search for "MyPlugin" as a key to replace everywhere in this directory.___
+# Funz plugin: Excel
 
-# Funz plugin: MyPlugin
-
-This plugin is dedicated to launch MyPlugin calculations from Funz.
+This plugin is dedicated to launch Excel calculations from Funz.
 It supports the following syntax and features:
 
   * Input
-    * file type supported: '*.MyPlugin', any other format for resources
+    * file type supported: '*.xlsx' or '*.xlsm'
     * parameter syntax: 
       * variable syntax: `$(...)`
       * formula syntax: `@{...}`
       * comment char: `#`
-    * example input file:
-        ```
-        ...
-        ... $(x1~[1,2]) ...
-        ... $x1 ...
-        ...
-        ```
-      * will identify input:
-        * x1, expected to vary inside [1,2]
-        * x2, expected to vary inside [0,1] (by default)
-      * replace `!{?x2 + 1.23 | #.###}` expression by its evaluation
-
+    * example input file: [sheet.xlsx](https://github.com/Funz/plugin-Excel/blob/master/src/main/samples/sheet.xlsx)
+      * will identify input cell commented by `$VariableName` as variables
   * Output
-    * file type supported: '*.MyPlugin.out'
-    * read any named value printed with `=`, like `...`
+    * file type supported: 'out.txt' (which is standard output stream)
+    * read any commented cell `=ResultName`
     * example output file:
         ```
-        ...
-        z= ...
-        ...
+        Microsoft (R) Windows Script Host Version 5.8
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        z=125
         ```
         * will return output:
-          * z=... 
+          * z=125
 
 
-![Analytics](https://ga-beacon.appspot.com/UA-109580-20/plugin-MyPlugin)
+![Analytics](https://ga-beacon.appspot.com/UA-109580-20/plugin-Excel)

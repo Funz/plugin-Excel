@@ -31,14 +31,14 @@ script:
 
 before_deploy:
   - ant clean dist
-  - cd dist; zip -r ../plugin-MyPlugin.zip *; cd ..
+  - cd dist; zip -r ../plugin-Excel.zip *; cd ..
   - ant install
-  - zip -r Funz-MyPlugin.zip Funz-MyPlugin
+  - zip -r Funz-Excel.zip Funz-Excel
   
 deploy:
   provider: releases
   api_key:
-    secure: __PUT_YOUR_GITHUB_ACCESS_KEY_HERE__:_'travis_setup_releases_--force'_will_generate_a_correct_.travis.yml
+    secure: KM+xwulpkCETAqfIu2nDiu8Ip0ANm4/VznBV+tncpeXNAX7DB5jA0iSXnC6dQoFwohHNm+c84domdZDkAvNTJvnpH2hd4fPzGRlJu7qdbdMrjy0+9Yl9K8koGKYBLSMRZf6HP1W3fJWPj1kZs8qQmwu+x+feGrbQciiNpy6cpD+zGuFcFdQ0Dbz7/1LUVEqi80ds8metV/7llBpfg2/TMJf2r5SD268eCcZwFcPp8YENRfK8Q1GXKPDG8rh95zlacMGZ6/xagEAoXmmfG5qkhuKdzy2XRVW5QBnjECsE8ptmprf1wQqXisd7So31b5NKBMLMCFGGjBk8HDcTgaqf3wO1qycrTRud5I8+R2o8GVCnAhORDo70J06qW1Yzu48ecfyQkKBgcSr8OReUusW40qNWAt0u2Q7arVDeRqtNINVjvEazpR2fB9Gwl3Ph06qYI+XsWybfsCYqOjJaCLHEAmaEeg7HUKfYP4sk5Sc7zjdQ+/Wh2e3GbCkBDRGAnsaK266gwNN2zp9ynec/nAU0VC4soXHw5ym/m4k/RMVCqPM6m2ZyS6KD7sja0Ow+msbCo/WoxE2kGV1OdIIFr6A8fG/mYAQiAFoG1HiywAgxp/EWo1SpWJ6nzfj/7p42AxvJ2XU2h2QnSEKmJmKPn9xx+pRqQnbos6hssy4I1IOML8o=
   file_glob: true
   file:
     - Funz-*.zip
