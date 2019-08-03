@@ -1,0 +1,15 @@
+variableStartSymbol=$
+variableLimit=(...)
+formulaStartSymbol=@
+formulaLimit={...}
+commentLineChar=#
+
+datasetFilter=contains("(.*)","print\\(")
+
+outputlist=x y z
+
+output.x.get=lines("(.*)out") >> filter("^x=(.*)") >> after("=")
+
+output.y.get=lines("(.*)out") >> filter("^y=(.*)") >> after("=")
+
+output.z.get=lines("(.*)out") >> filter("^z=(.*)") >> after("=")
