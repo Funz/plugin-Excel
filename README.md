@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Funz/plugin-Excel.png)](https://travis-ci.org/Funz/plugin-Excel)
+[![.github/workflows/ant.yml](https://github.com/Funz/plugin-Excel/actions/workflows/ant.yml/badge.svg)](https://github.com/Funz/plugin-Excel/actions/workflows/ant.yml)
 
 # Funz plugin: Excel
 
